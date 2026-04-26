@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy Policy — Orba by Naqsh Forge</title>
+<meta name="description" content="Orba collects no personal data. Everything stays on your device. Read our privacy policy.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --void:#040605;--deep:#070908;--card:#0C1410;--lift:#111D14;
+  --rim:#1A2B1D;--border:rgba(180,240,80,.07);--border2:rgba(180,240,80,.14);
+  --lime:#B4F050;--lime-pale:rgba(180,240,80,.06);
+  --gold:#C8A04A;
+  --text:#EAE5D8;--text2:#7A9880;--text3:#3A5A40;--text4:#1E3020;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'DM Sans',system-ui,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--void);color:var(--text);-webkit-font-smoothing:antialiased;min-height:100vh}
+
+/* NOISE */
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");opacity:.022;pointer-events:none;z-index:0}
+
+/* GEO PATTERN */
+.geo-bg{position:fixed;inset:0;z-index:0;opacity:.02;pointer-events:none;overflow:hidden}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes pulse{0%,100%{opacity:.5}50%{opacity:1}}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* LAYOUT */
+.wrap{position:relative;z-index:1;max-width:780px;margin:0 auto;padding:0 32px}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(4,6,5,.9);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:16px 0}
+.nav-inner{max-width:780px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.nav-mark svg{width:24px;height:24px}
+.nav-brand{font-family:var(--serif);font-size:16px;color:var(--text);letter-spacing:.12em}
+.nav-brand span{color:var(--text3);font-size:12px;letter-spacing:.08em;display:block;margin-top:1px;font-family:var(--sans);font-weight:300}
+.nav-back{font-size:12px;color:var(--text3);text-decoration:none;letter-spacing:.06em;transition:color .2s;display:flex;align-items:center;gap:6px}
+.nav-back:hover{color:var(--text2)}
+.nav-back svg{width:14px;height:14px}
+
+/* HERO */
+.hero{padding:72px 0 56px;border-bottom:1px solid var(--border);opacity:0;animation:fadeUp .9s .1s forwards}
+.hero-tag{font-size:10px;font-weight:500;color:var(--lime);letter-spacing:.22em;text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.hero-tag::before{content:'';width:18px;height:1px;background:var(--lime)}
+.hero-h{font-family:var(--serif);font-size:clamp(40px,6vw,68px);font-weight:300;color:var(--text);line-height:1.05;margin-bottom:14px;letter-spacing:-.01em}
+.hero-h em{color:var(--lime);font-style:italic}
+.hero-sub{font-size:14px;color:var(--text2);line-height:1.8;max-width:520px;font-weight:300}
+.hero-meta{display:flex;gap:24px;margin-top:28px;flex-wrap:wrap}
+.meta-item{font-size:11px;color:var(--text3);letter-spacing:.06em;display:flex;align-items:center;gap:6px}
+.meta-dot{width:4px;height:4px;border-radius:50%;background:var(--lime);animation:pulse 2s ease-in-out infinite}
+
+/* SUMMARY CARDS */
+.summary{padding:48px 0;border-bottom:1px solid var(--border);opacity:0;animation:fadeUp .9s .3s forwards}
+.summary-title{font-size:10px;font-weight:500;color:var(--text3);letter-spacing:.18em;text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.summary-title::before{content:'';width:18px;height:1px;background:var(--text3)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--border)}
+.sc{background:var(--void);padding:22px 20px}
+.sc-icon{width:28px;height:28px;margin-bottom:12px}
+.sc-t{font-family:var(--serif);font-size:17px;color:var(--text);margin-bottom:6px}
+.sc-t em{font-style:italic;color:var(--lime)}
+.sc-b{font-size:12px;color:var(--text3);line-height:1.7}
+
+/* CONTENT */
+.content{padding:48px 0;opacity:0;animation:fadeUp .9s .5s forwards}
+.section{margin-bottom:52px}
+.section:last-child{margin-bottom:0}
+.s-num{font-family:var(--serif);font-size:11px;color:var(--text3);letter-spacing:.12em;margin-bottom:8px;display:flex;align-items:center;gap:10px}
+.s-num::before{content:'';width:16px;height:1px;background:var(--text3)}
+.s-title{font-family:var(--serif);font-size:28px;font-weight:400;color:var(--text);margin-bottom:18px;line-height:1.1}
+.s-title em{font-style:italic;color:var(--lime)}
+.s-body{font-size:14px;color:var(--text2);line-height:1.95;font-weight:300}
+.s-body p{margin-bottom:16px}
+.s-body p:last-child{margin-bottom:0}
+.s-body strong{color:var(--text);font-weight:500}
+
+/* HIGHLIGHT BOX */
+.highlight{background:var(--card);border:1px solid var(--border2);border-radius:2px;padding:24px 28px;margin:20px 0;position:relative;overflow:hidden}
+.highlight::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--lime)}
+.highlight-label{font-size:10px;font-weight:500;color:var(--lime);letter-spacing:.18em;text-transform:uppercase;margin-bottom:10px}
+.highlight-body{font-size:13px;color:var(--text2);line-height:1.85;font-weight:300}
+.highlight-body strong{color:var(--text);font-weight:500}
+
+/* LIST */
+.policy-list{list-style:none;padding:0;margin:16px 0}
+.policy-list li{display:flex;align-items:flex-start;gap:12px;padding:10px 0;border-bottom:1px solid var(--border);font-size:13px;color:var(--text2);line-height:1.7;font-weight:300}
+.policy-list li:last-child{border-bottom:none}
+.li-mark{width:16px;height:16px;flex-shrink:0;margin-top:2px;display:flex;align-items:center;justify-content:center}
+.li-mark svg{width:12px;height:12px}
+.li-no{color:var(--text3)}
+
+/* DATA TABLE */
+.data-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:13px}
+.data-table th{text-align:left;padding:10px 14px;font-size:10px;font-weight:500;color:var(--text3);letter-spacing:.1em;text-transform:uppercase;border-bottom:1px solid var(--border);background:var(--card)}
+.data-table td{padding:12px 14px;border-bottom:1px solid var(--border);color:var(--text2);line-height:1.6;vertical-align:top}
+.data-table tr:last-child td{border-bottom:none}
+.data-table td:first-child{color:var(--text);font-weight:400}
+.badge-yes{display:inline-flex;padding:2px 8px;border-radius:20px;font-size:10px;font-weight:500;background:rgba(180,240,80,.1);color:var(--lime);border:1px solid rgba(180,240,80,.2)}
+.badge-no{display:inline-flex;padding:2px 8px;border-radius:20px;font-size:10px;font-weight:500;background:rgba(255,112,96,.08);color:#FF7060;border:1px solid rgba(255,112,96,.18)}
+
+/* CONTACT */
+.contact-box{background:var(--card);border:1px solid var(--border);padding:32px;margin:48px 0 0;display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap}
+.cb-left{flex:1;min-width:200px}
+.cb-title{font-family:var(--serif);font-size:22px;color:var(--text);margin-bottom:6px}
+.cb-title em{font-style:italic;color:var(--lime)}
+.cb-sub{font-size:13px;color:var(--text3);line-height:1.7;font-weight:300}
+.cb-right{display:flex;flex-direction:column;gap:8px;flex-shrink:0}
+.cb-link{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--text2);text-decoration:none;padding:10px 18px;border:1px solid var(--rim);border-radius:2px;transition:all .2s;font-weight:400;letter-spacing:.03em;white-space:nowrap}
+.cb-link:hover{border-color:var(--border2);color:var(--text)}
+.cb-link svg{width:13px;height:13px;flex-shrink:0}
+
+/* FOOTER */
+footer{border-top:1px solid var(--border);padding:36px 0 48px;margin-top:0}
+.foot-inner{max-width:780px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;flex-wrap:gap;gap:16px}
+.foot-logo{display:flex;align-items:center;gap:9px;text-decoration:none}
+.foot-name{font-family:var(--serif);font-size:15px;color:var(--text3);letter-spacing:.1em}
+.foot-copy{font-size:11px;color:var(--text4);letter-spacing:.05em}
+.foot-links{display:flex;gap:20px;list-style:none}
+.foot-links a{font-size:11px;color:var(--text3);text-decoration:none;letter-spacing:.06em;transition:color .2s}
+.foot-links a:hover{color:var(--text2)}
+
+/* DIVIDER */
+.divider{width:100%;height:1px;background:var(--border);margin:0}
+
+@media(max-width:600px){
+  .wrap{padding:0 20px}
+  .nav-inner{padding:0 20px}
+  .foot-inner{padding:0 20px;flex-direction:column;align-items:flex-start}
+  .hero{padding:52px 0 40px}
+  .cards{grid-template-columns:1fr}
+  .data-table{display:block;overflow-x:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- GEO BG -->
+<div class="geo-bg">
+  <svg width="100%" height="100%">
+    <defs>
+      <pattern id="geo" x="0" y="0" width="100" height="86" patternUnits="userSpaceOnUse">
+        <path d="M50 2L98 27V61L50 86L2 61V27Z" stroke="#B4F050" stroke-width=".4" fill="none"/>
+        <path d="M50 18L78 34V57L50 73L22 57V34Z" stroke="#B4F050" stroke-width=".3" fill="none"/>
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#geo)"/>
+  </svg>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">
+      <div class="nav-mark">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M12 1.5L22.5 7V17L12 22.5L1.5 17V7Z" stroke="#B4F050" stroke-width=".7" fill="none" opacity=".3"/>
+          <path d="M12 4.5L19.5 9V15L12 19.5L4.5 15V9Z" stroke="#B4F050" stroke-width=".9" fill="none" opacity=".6"/>
+          <path d="M12 7.5L16.5 10.5V13.5L12 16.5L7.5 13.5V10.5Z" stroke="#B4F050" stroke-width="1.1" fill="none"/>
+          <circle cx="12" cy="12" r="1.8" fill="#B4F050"/>
+        </svg>
+      </div>
+      <div class="nav-brand">
+        Naqsh Forge
+        <span>نقش فورج</span>
+      </div>
+    </a>
+    <a class="nav-back" href="index.html">
+      <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 2 4 7 9 12"/></svg>
+      Back to site
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="wrap">
+  <div class="hero">
+    <div class="hero-tag">Privacy Policy — Orba</div>
+    <h1 class="hero-h">We collect<br><em>nothing.</em></h1>
+    <p class="hero-sub">Orba is a completely offline app. Your financial data never leaves your device, never touches a server, and is never seen by anyone at Naqsh Forge. This policy exists to make that promise official and to satisfy Apple's App Store requirements.</p>
+    <div class="hero-meta">
+      <div class="meta-item"><span class="meta-dot"></span>Effective: 1 May 2026</div>
+      <div class="meta-item"><span class="meta-dot"></span>App: Orba — Budget Journal</div>
+      <div class="meta-item"><span class="meta-dot"></span>Developer: Naqsh Forge</div>
+    </div>
+  </div>
+
+  <!-- SUMMARY CARDS -->
+  <div class="summary">
+    <div class="summary-title">The short version</div>
+    <div class="cards">
+      <div class="sc">
+        <svg class="sc-icon" viewBox="0 0 28 28" fill="none">
+          <path d="M14 3L25 9V19L14 25L3 19V9Z" stroke="#B4F050" stroke-width="1" fill="none" opacity=".3"/>
+          <path d="M14 7L21 11V17L14 21L7 17V11Z" stroke="#B4F050" stroke-width="1.2" fill="none" opacity=".6"/>
+          <path d="M10 14l3 3 5-6" stroke="#B4F050" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="sc-t">Zero data <em>collected</em></div>
+        <div class="sc-b">We do not collect, store, transmit, or process any personal information whatsoever.</div>
+      </div>
+      <div class="sc">
+        <svg class="sc-icon" viewBox="0 0 28 28" fill="none">
+          <path d="M14 3L25 9V19L14 25L3 19V9Z" stroke="#B4F050" stroke-width="1" fill="none" opacity=".3"/>
+          <path d="M14 7L21 11V17L14 21L7 17V11Z" stroke="#B4F050" stroke-width="1.2" fill="none" opacity=".6"/>
+          <rect x="9" y="12" width="10" height="8" rx="1.5" stroke="#B4F050" stroke-width="1.2" fill="none"/>
+          <path d="M11 12V10a3 3 0 016 0v2" stroke="#B4F050" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+        </svg>
+        <div class="sc-t">Stays on <em>your device</em></div>
+        <div class="sc-b">All entries, budgets, and settings live exclusively in your iPhone's local storage.</div>
+      </div>
+      <div class="sc">
+        <svg class="sc-icon" viewBox="0 0 28 28" fill="none">
+          <path d="M14 3L25 9V19L14 25L3 19V9Z" stroke="#B4F050" stroke-width="1" fill="none" opacity=".3"/>
+          <path d="M14 7L21 11V17L14 21L7 17V11Z" stroke="#B4F050" stroke-width="1.2" fill="none" opacity=".6"/>
+          <path d="M9 14h10M14 9v10" stroke="#B4F050" stroke-width="1.2" stroke-linecap="round" opacity=".4"/>
+          <circle cx="14" cy="14" r="2.5" fill="none" stroke="#B4F050" stroke-width="1.2"/>
+          <line x1="18" y1="10" x2="22" y2="6" stroke="#B4F050" stroke-width="1.2" stroke-linecap="round"/>
+          <line x1="20" y1="6" x2="22" y2="8" stroke="#B4F050" stroke-width="1" stroke-linecap="round"/>
+        </svg>
+        <div class="sc-t">No third <em>parties</em></div>
+        <div class="sc-b">No analytics tools, no ad networks, no crash reporters, no cloud services of any kind.</div>
+      </div>
+      <div class="sc">
+        <svg class="sc-icon" viewBox="0 0 28 28" fill="none">
+          <path d="M14 3L25 9V19L14 25L3 19V9Z" stroke="#B4F050" stroke-width="1" fill="none" opacity=".3"/>
+          <path d="M14 7L21 11V17L14 21L7 17V11Z" stroke="#B4F050" stroke-width="1.2" fill="none" opacity=".6"/>
+          <path d="M9 14h4M15 14h4M9 11h10M9 17h10" stroke="#B4F050" stroke-width="1" stroke-linecap="round"/>
+        </svg>
+        <div class="sc-t">No account <em>required</em></div>
+        <div class="sc-b">Orba requires no sign-up, no login, no email address, and no identity of any kind.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+
+    <!-- 1. INFORMATION WE COLLECT -->
+    <div class="section">
+      <div class="s-num">01</div>
+      <h2 class="s-title">Information we <em>collect</em></h2>
+      <div class="s-body">
+        <p><strong>None.</strong> Orba does not collect any personal information from you. This is not a simplified statement — it is a technical fact about how the app is built.</p>
+        <p>Orba has no network calls, no analytics SDK, no crash reporting service, and no backend infrastructure. The app operates entirely on your device. When you log an expense, categorise a purchase, or set a budget, that information is written to your device's local storage only — specifically to Apple's AsyncStorage on your iPhone. It goes nowhere else.</p>
+      </div>
+
+      <div class="highlight">
+        <div class="highlight-label">Technical fact</div>
+        <div class="highlight-body">Orba makes <strong>zero outbound network requests</strong> during normal operation. There are no servers receiving your data because there are no servers. The app functions completely without an internet connection, and this is by design — not a limitation.</div>
+      </div>
+    </div>
+
+    <!-- 2. DATA STORED ON DEVICE -->
+    <div class="section">
+      <div class="s-num">02</div>
+      <h2 class="s-title">Data stored on <em>your device</em></h2>
+      <div class="s-body">
+        <p>The following information is stored locally on your iPhone and is never transmitted anywhere:</p>
+      </div>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Data type</th>
+            <th>What it contains</th>
+            <th>Stored locally</th>
+            <th>Transmitted</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Expense entries</td>
+            <td>Amount, category, note, date, time</td>
+            <td><span class="badge-yes">On device only</span></td>
+            <td><span class="badge-no">Never</span></td>
+          </tr>
+          <tr>
+            <td>Budget settings</td>
+            <td>Monthly budget amount</td>
+            <td><span class="badge-yes">On device only</span></td>
+            <td><span class="badge-no">Never</span></td>
+          </tr>
+          <tr>
+            <td>Currency preference</td>
+            <td>Selected currency code</td>
+            <td><span class="badge-yes">On device only</span></td>
+            <td><span class="badge-no">Never</span></td>
+          </tr>
+          <tr>
+            <td>Onboarding status</td>
+            <td>Whether setup is complete</td>
+            <td><span class="badge-yes">On device only</span></td>
+            <td><span class="badge-no">Never</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="s-body" style="margin-top:16px">
+        <p>All of this data is stored using Apple's standard AsyncStorage API on your device. <strong>Deleting the app from your iPhone permanently removes all of this data.</strong> There is no cloud backup, no account to restore from, and no way to recover it from Naqsh Forge — because we have never had it.</p>
+      </div>
+    </div>
+
+    <!-- 3. WHAT WE DO NOT DO -->
+    <div class="section">
+      <div class="s-num">03</div>
+      <h2 class="s-title">What we <em>never</em> do</h2>
+      <div class="s-body">
+        <p>The following practices are technically impossible in the current version of Orba, because the infrastructure to do them does not exist:</p>
+      </div>
+
+      <ul class="policy-list">
+        <li>
+          <div class="li-mark"><svg viewBox="0 0 12 12" fill="none" stroke="#FF7060" stroke-width="1.5" stroke-linecap="round"><line x1="2" y1="2" x2="10" y2="10"/><line x1="10" y1="2" x2="2" y2="10"/></svg></div>
+          <span><strong class="li-no">Collect personal information</strong> — no name, email, phone number, location, device ID, or any identifier is collected.</span>
+        </li>
+        <li>
+          <div class="li-mark"><svg viewBox="0 0 12 12" fill="none" stroke="#FF7060" stroke-width="1.5" stroke-linecap="round"><line x1="2" y1="2" x2="10" y2="10"/><line x1="10" y1="2" x2="2" y2="10"/></svg></div>
+          <span><strong class="li-no">Connect to your bank</strong> — Orba requires no bank connection, banking credentials, or financial account access of any kind.</span>
+        </li>
+        <li>
+          <div class="li-mark"><svg viewBox="0 0 12 12" fill="none" stroke="#FF7060" stroke-width="1.5" stroke-linecap="round"><line x1="2" y1="2" x2="10" y2="10"/><line x1="10" y1="2" x2="2" y2="10"/></svg></div>
+          <span><strong class="li-no">Use analytics tools</strong> — no Firebase Analytics, Amplitude, Mixpanel, or any other analytics or behavioural tracking service is embedded in the app.</span>
+        </li>
+        <li>
+          <div class="li-mark"><svg viewBox="0 0 12 12" fill="none" stroke="#FF7060" stroke-width="1.5" stroke-linecap="round"><line x1="2" y1="2" x2="10" y2="10"/><line x1="10" y1="2" x2="2" y2="10"/></svg></div>
+          <span><strong class="li-no">Serve advertisements</strong> — Orba contains no advertising SDK, no ad network integration, and no mechanism to display targeted or non-targeted ads.</span>
+        </li>
+        <li>
+          <div class="li-mark"><svg viewBox="0 0 12 12" fill="none" stroke="#FF7060" stroke-width="1.5" stroke-linecap="round"><line x1="2" y1="2" x2="10" y2="10"/><line x1="10" y1="2" x2="2" y2="10"/></svg></div>
+          <span><strong class="li-no">Use crash reporting services</strong> — no Sentry, Crashlytics, or similar service is used. Crash information stays on your device.</span>
+        </li>
+        <li>
+          <div class="li-mark"><svg viewBox="0 0 12 12" fill="none" stroke="#FF7060" stroke-width="1.5" stroke-linecap="round"><line x1="2" y1="2" x2="10" y2="10"/><line x1="10" y1="2" x2="2" y2="10"/></svg></div>
+          <span><strong class="li-no">Track your location</strong> — Orba never requests location permission and has no access to your GPS or location data.</span>
+        </li>
+        <li>
+          <div class="li-mark"><svg viewBox="0 0 12 12" fill="none" stroke="#FF7060" stroke-width="1.5" stroke-linecap="round"><line x1="2" y1="2" x2="10" y2="10"/><line x1="10" y1="2" x2="2" y2="10"/></svg></div>
+          <span><strong class="li-no">Share data with third parties</strong> — we have no data to share, and we have made no agreements to share data with any company.</span>
+        </li>
+        <li>
+          <div class="li-mark"><svg viewBox="0 0 12 12" fill="none" stroke="#FF7060" stroke-width="1.5" stroke-linecap="round"><line x1="2" y1="2" x2="10" y2="10"/><line x1="10" y1="2" x2="2" y2="10"/></svg></div>
+          <span><strong class="li-no">Process payments in-app</strong> — purchases are handled entirely by Apple's App Store infrastructure. Naqsh Forge never sees or processes your payment details.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 4. APPLE APP STORE -->
+    <div class="section">
+      <div class="s-num">04</div>
+      <h2 class="s-title">Apple App Store <em>purchases</em></h2>
+      <div class="s-body">
+        <p>Orba is a paid app sold through the Apple App Store. When you purchase Orba, the transaction is processed entirely by Apple Inc. under Apple's own privacy policy and terms of service.</p>
+        <p>Naqsh Forge receives payment proceeds from Apple but <strong>does not receive your payment card details, Apple ID, or any payment-related personal information</strong>. Apple's handling of your purchase is governed by Apple's Privacy Policy, available at apple.com/legal/privacy.</p>
+        <p>Apple may collect standard App Store usage data (such as download counts and region information) in aggregate form as part of their platform operations. This is governed by Apple, not Naqsh Forge.</p>
+      </div>
+    </div>
+
+    <!-- 5. CHILDREN -->
+    <div class="section">
+      <div class="s-num">05</div>
+      <h2 class="s-title">Children's <em>privacy</em></h2>
+      <div class="s-body">
+        <p>Orba is rated 4+ on the App Store and does not contain content restricted to any age group. Because we collect no personal information from any user, we also collect no information from children under 13 (COPPA) or children under 16 (GDPR). The app is safe for use by anyone.</p>
+      </div>
+    </div>
+
+    <!-- 6. DATA DELETION -->
+    <div class="section">
+      <div class="s-num">06</div>
+      <h2 class="s-title">Deleting your <em>data</em></h2>
+      <div class="s-body">
+        <p>Because all data is stored exclusively on your device, you have complete control over it at all times:</p>
+      </div>
+      <ul class="policy-list">
+        <li>
+          <div class="li-mark"><svg viewBox="0 0 12 12" fill="none" stroke="#B4F050" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 6 5 9.5 10 3"/></svg></div>
+          <span><strong>Delete the app</strong> from your iPhone to permanently remove all Orba data from your device.</span>
+        </li>
+        <li>
+          <div class="li-mark"><svg viewBox="0 0 12 12" fill="none" stroke="#B4F050" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 6 5 9.5 10 3"/></svg></div>
+          <span><strong>Reset app data</strong> within Orba (Settings → Reset) to clear all entries while keeping the app installed.</span>
+        </li>
+        <li>
+          <div class="li-mark"><svg viewBox="0 0 12 12" fill="none" stroke="#B4F050" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 6 5 9.5 10 3"/></svg></div>
+          <span><strong>No request to us is needed</strong> — since we hold no data, there is nothing for us to delete on your behalf.</span>
+        </li>
+      </ul>
+      <div class="s-body" style="margin-top:12px">
+        <p>There is no account deletion process because there is no account. When data is deleted from your device, it is gone permanently — there is no server-side backup to restore from.</p>
+      </div>
+    </div>
+
+    <!-- 7. CHANGES -->
+    <div class="section">
+      <div class="s-num">07</div>
+      <h2 class="s-title">Changes to this <em>policy</em></h2>
+      <div class="s-body">
+        <p>If Orba ever adds features that involve data collection — such as optional cloud backup or cross-device sync — this privacy policy will be updated before those features are released. The updated policy will be published at this URL, and the effective date at the top of this page will be updated accordingly.</p>
+        <p>We will not introduce any data collection without updating this policy first and making it clearly visible in the App Store listing.</p>
+      </div>
+    </div>
+
+    <!-- 8. APPLICABLE LAW -->
+    <div class="section">
+      <div class="s-num">08</div>
+      <h2 class="s-title">Applicable <em>law</em></h2>
+      <div class="s-body">
+        <p>Naqsh Forge is registered in the United Arab Emirates. This privacy policy is written in compliance with:</p>
+      </div>
+      <ul class="policy-list">
+        <li>
+          <div class="li-mark"><svg viewBox="0 0 12 12" fill="none" stroke="#B4F050" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 6 5 9.5 10 3"/></svg></div>
+          <span><strong>UAE Federal Decree-Law No. 45 of 2021</strong> on the Protection of Personal Data (PDPL)</span>
+        </li>
+        <li>
+          <div class="li-mark"><svg viewBox="0 0 12 12" fill="none" stroke="#B4F050" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 6 5 9.5 10 3"/></svg></div>
+          <span><strong>Apple App Store Review Guidelines</strong> — Section 5 (Privacy)</span>
+        </li>
+        <li>
+          <div class="li-mark"><svg viewBox="0 0 12 12" fill="none" stroke="#B4F050" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 6 5 9.5 10 3"/></svg></div>
+          <span><strong>GDPR (EU General Data Protection Regulation)</strong> — applicable to EU users where relevant</span>
+        </li>
+        <li>
+          <div class="li-mark"><svg viewBox="0 0 12 12" fill="none" stroke="#B4F050" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 6 5 9.5 10 3"/></svg></div>
+          <span><strong>COPPA (Children's Online Privacy Protection Act)</strong> — applicable to US users</span>
+        </li>
+      </ul>
+      <div class="s-body" style="margin-top:12px">
+        <p>Because Orba collects no personal data, compliance with all of the above is straightforward: there is no data to protect, process, share, retain, or delete.</p>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="contact-box">
+      <div class="cb-left">
+        <h3 class="cb-title">Questions? <em>Write to us.</em></h3>
+        <p class="cb-sub">If you have any questions about this privacy policy, how Orba works, or anything else, we are happy to respond. We aim to reply within 2 business days.</p>
+      </div>
+      <div class="cb-right">
+        <a class="cb-link" href="mailto:privacy@naqshforge.com">
+          <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="12" height="9" rx="1.5"/><polyline points="1 3 7 8.5 13 3"/></svg>
+          privacy@naqshforge.com
+        </a>
+        <a class="cb-link" href="mailto:hello@naqshforge.com">
+          <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="12" height="9" rx="1.5"/><polyline points="1 3 7 8.5 13 3"/></svg>
+          hello@naqshforge.com
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-inner">
+    <a class="foot-logo" href="index.html">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <path d="M10 1L19 5.5V14.5L10 19L1 14.5V5.5Z" stroke="#B4F050" stroke-width=".7" fill="none" opacity=".3"/>
+        <path d="M10 4L16.5 7.5V12.5L10 16L3.5 12.5V7.5Z" stroke="#B4F050" stroke-width=".9" fill="none" opacity=".6"/>
+        <path d="M10 7L13.5 9V11L10 13L6.5 11V9Z" stroke="#B4F050" stroke-width="1.1" fill="none"/>
+        <circle cx="10" cy="10" r="1.5" fill="#B4F050"/>
+      </svg>
+      <div class="foot-name">Naqsh Forge</div>
+    </a>
+    <div class="foot-copy">© 2026 Naqsh Forge. Orba Privacy Policy.</div>
+    <ul class="foot-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#apps">Orba</a></li>
+      <li><a href="mailto:hello@naqshforge.com">Contact</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>
